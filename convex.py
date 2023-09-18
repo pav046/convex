@@ -17,6 +17,10 @@ class Figure:
 class Void(Figure):
     """ "Hульугольник" """
 
+    def __init__(self, n=None):
+        if n is not None:
+            Figure.N = n
+
     def add(self, p):
         return Point(p)
 

@@ -6,8 +6,8 @@ from section import Section
 class TestPointVoid:
 
     def setup_method(self):
-        Section.init(0, 0, 1, 0)
-        self.f = Void()
+        Section.init(0, 0, 1, 0, reload=True)
+        self.f = Void(n=0)
 
     # У нульугольника нет вершин, лежащих на расстоянии 1 от отрезка
     def test_null(self):
