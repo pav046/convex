@@ -59,7 +59,7 @@ class Segment(Figure):
             return Segment(self.p, r)
         elif self.p.is_inside(r, self.q):
             Figure.N -= self.p.distance
-            return Segment(r, self.q)
+            return Segment(self.q, r)
         else:
             return self
 

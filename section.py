@@ -71,9 +71,8 @@ class Section:
             res2 = (-b - sqrtd) / (2 * a)
             if res1 > res2:
                 res1, res2 = res2, res1
-            if res1 < start and res2 > end:
-                res = True
-            elif res1 >= end or res2 <= start:
+            if res1 >= end or abs(end - res1) < 0.0000000001\
+                    or res2 <= start or abs(start - res2) < 0.0000000001:
                 res = False
             else:
                 res = True
